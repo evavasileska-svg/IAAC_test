@@ -1,0 +1,49 @@
+:root{
+  --sidebar-bg:#efefef;
+  --accent:#222;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+body{font-family:'Open Sans',sans-serif;margin:0;color:#222}
+.resume{display:grid;grid-template-columns:320px 1fr;min-height:100vh}
+.sidebar{background:var(--sidebar-bg);padding:36px 30px}
+.photo{display:flex;justify-content:center;margin-bottom:18px}
+.photo img{width:130px;height:130px;border-radius:50%;border:6px solid white;box-shadow:0 2px 0 rgba(0,0,0,0.06)}
+.sidebar h3{letter-spacing:2px;margin:12px 0;color:var(--accent)}
+.sidebar p{color:var(--muted);line-height:1.45;font-size:14px}
+.education p{font-size:14px;color:var(--muted)}
+.skills .skill-list{list-style:none;padding:0;margin:0}
+.skill-list li{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+.skill-list span{font-size:13px;color:#333}
+.bar{width:50%;background:#ddd;height:8px;margin-left:12px;border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:#222}
+.language ul{padding-left:18px;color:var(--muted)}
+
+.content{background:white;padding:0 50px 80px}
+.hero{display:flex;align-items:center;background:var(--accent);color:white;height:120px;position:relative;margin-bottom:18px}
+.hero-right{padding-left:40px}
+.hero h1{font-family:'Montserrat',sans-serif;margin:0;font-weight:800;letter-spacing:3px;font-size:36px}
+.hero .role{opacity:0.9;margin-top:6px}
+
+.contacts{padding:18px 0;border-bottom:1px solid #eee}
+.contact-grid{display:flex;gap:28px;color:var(--muted);font-size:14px}
+
+.experience{padding:22px 0}
+.experience h2{letter-spacing:3px;color:var(--accent)}
+.timeline{position:relative;padding-left:40px}
+.timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:#e5e5e5}
+.item{position:relative;padding:18px 0 18px 24px;border-bottom:1px dashed #f0f0f0}
+.item::before{content:'';position:absolute;left:-14px;top:22px;width:12px;height:12px;background:white;border:2px solid var(--accent);border-radius:50%}
+.item h4{margin:0 0 6px 0}
+.meta{position:absolute;right:0;top:18px;color:var(--muted);font-size:13px}
+.company{color:var(--muted);font-size:13px}
+.references{padding:22px 0}
+.refs{display:flex;gap:40px}
+.refs h4{margin:0 0 6px 0}
+
+@media (max-width:900px){
+  .resume{grid-template-columns:1fr;}
+  .sidebar{order:2}
+  .content{order:1;padding:20px}
+  .hero{height:100px}
+}

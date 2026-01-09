@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 200 200">
+  <rect width="100%" height="100%" fill="#f0f0f0"/>
+  <defs>
+    <clipPath id="circleMask">
+      <circle cx="100" cy="70" r="60" />
+    </clipPath>
+  </defs>
+
+  <!-- Image: place a photo named `profile.jpg` (or .png) into the same assets folder -->
+  <image href="profile.jpg" x="40" y="10" width="120" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#circleMask)" />
+
+  <!-- Fallback circle visible if image missing -->
+  <circle cx="100" cy="70" r="60" fill="#d8d8d8" />
+  <circle cx="100" cy="70" r="44" fill="#fff" />
+
+  <!-- Outer white ring to mimic profile border -->
+  <circle cx="100" cy="70" r="62" fill="none" stroke="#fff" stroke-width="6" />
+
+  <!-- simple shoulder block -->
+  <rect x="40" y="130" width="120" height="40" rx="6" fill="#d8d8d8"/>
+</svg>
